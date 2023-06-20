@@ -1,0 +1,137 @@
+/* global styles */
+body {
+    padding: 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 1em 0 0.5em 0;
+}
+p {
+    margin: 0.5em 0;
+}
+
+/* Top site header */
+body > header {
+    background-color: #ff7200;
+    margin: -1em -1em 1em -1em;
+    padding: 0.5em;
+    text-align: center;
+}
+body > header h1 {
+    text-shadow: #666 3px 3px 5px;
+    margin: 0 0 8px 0;
+    color: #fff;
+}
+body > header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+body > header h2 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    color: #ddd;
+    text-shadow: #666 3px 3px 5px;
+}
+body > header h2 a {
+    color: #ddd;
+}
+body > header h2 a:hover {
+    color: #999;
+}
+
+/* Page wrapper */
+section#main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Page header */
+section#main > article > header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+section#main > article > header h1 {
+    margin-top: 0.5em;
+}
+
+/* Container for topic blocks on main page */
+#main_sections {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+#main_sections > section {
+    margin: 0 1em;
+    padding: 5px;
+    max-width: 360px;
+}
+#main_sections > section header {
+    font-size: 120%;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+/* Photo gallery */
+section.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0 -0.25rem;
+}
+section.gallery > div {
+    margin: 0 0.25rem;
+}
+section.gallery img {
+    object-position: center;
+    width: 100%;
+    max-height: 250px;
+    margin: 1rem 0;
+}
+.img-thumbnail {
+    padding: 0.5rem;
+}
+
+/* Company details in the table */
+table#place_details {
+    min-width: 60%;
+}
+table#place_details tr td {
+    vertical-align: top;
+}
+table#place_details tr td:first-child {
+    text-align: right;
+    padding-right: 0.5em;
+    color: #666;
+    font-weight: bold;
+}
+
+
+section.places {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: normal;
+    margin-right: -1em;
+}
+
+section.places > section {
+    text-align: center;
+    padding: 0.5em;
+    margin: 0 1em 1.5em 0;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+section.places > section:hover {
+    border-color: #ccc;
+}
+
+section.places > section img {
+    display: block;
+    margin: 0 auto 0.25em auto;
+    width: 365px;
+    border-radius: 10px;
+}
+section.places > section a {
+    font-size: 18px;
+}
