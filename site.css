@@ -135,3 +135,7 @@ section.places > section img {
 section.places > section a {
     font-size: 18px;
 }
+input::placeholder {
+    opacity: 0.5 !important;
+    font-style: italic;
+}
