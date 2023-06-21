@@ -31,19 +31,19 @@
             <h1>Добавление места</h1>
         </header>
 
-        <p>Чтобы помочь в развитии сайта, вы можете отправить данные о каком-нибудь интересном месте в нашем районе Диди Дигоми. Обязательное условие &mdash; это место должно быть потенциально полезно пользователям нашего телеграм-чата и всем, кто живёт в нашем районе Тбилиси. Размещение полностью бесплатное, но производится в ручном режиме и обычно требуется некоторое время на обработку. Контакт <a href="https://t.me/gugglegum" target="_blank">админа</a> на всякий случай.</p>
+        <p>Чтобы помочь в развитии сайта, вы можете отправить данные о каком-нибудь интересном месте в нашем районе Диди Дигоми. Обязательное условие &mdash; это место должно быть потенциально полезно пользователям нашего <a href="https://t.me/dihomi">телеграм-чата</a> и всем, кто живёт в нашем районе Тбилиси. Размещение полностью бесплатное, но производится в ручном режиме и обычно требуется некоторое время на обработку и принятие решения. Контакт <a href="https://t.me/gugglegum" target="_blank">админа</a> на всякий случай.</p>
 
         <form action="https://u1311.blue.elastictech.org/dididighome/add_place.php" method="post" enctype="multipart/form-data" style="margin-top: 2em">
 
             <div class="mb-3">
-                <label for="formControlInputName" class="form-label">Название места</label>
-                <input type="text" name="name" class="form-control form-control-lg" id="formControlInputName" placeholder="Название места">
+                <label for="formControlInputPlaceName" class="form-label">Название места</label>
+                <input type="text" name="place_name" class="form-control form-control-lg" id="formControlInputPlaceName" placeholder="Название места">
             </div>
 
             <div class="mb-3">
-                <label for="formControlInputAddress" class="form-label">Адрес (если есть)</label>
-                <input type="text" name="address" id="formControlInputAddress" class="form-control" aria-labelledby="addressHelpBlock" placeholder="Улица, дом">
-                <div id="addressHelpBlock" class="form-text">Желательно на русском языке, как в Яндекс картах</div>
+                <label for="formControlInputPlaceAddress" class="form-label">Адрес (если есть)</label>
+                <input type="text" name="place_address" id="formControlInputPlaceAddress" class="form-control" aria-labelledby="placeAddressHelpBlock" placeholder="Улица, дом">
+                <div id="placeAddressHelpBlock" class="form-text">Желательно на русском языке, как в Яндекс картах</div>
             </div>
 
             <div class="mb-3">
