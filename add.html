@@ -33,11 +33,17 @@
 
         <p>Чтобы помочь в развитии сайта, вы можете отправить данные о каком-нибудь интересном месте в нашем районе Диди Дигоми. Обязательное условие &mdash; это место должно быть потенциально полезно пользователям нашего <a href="https://t.me/dihomi">телеграм-чата</a> и всем, кто живёт в нашем районе Тбилиси. Размещение полностью бесплатное, но производится в ручном режиме и обычно требуется некоторое время на обработку и принятие решения. Контакт <a href="https://t.me/gugglegum" target="_blank">админа</a> на всякий случай.</p>
 
-        <form action="https://u1311.blue.elastictech.org/dididighome/add_place.php" method="post" enctype="multipart/form-data" style="margin-top: 2em">
+        <form action="https://u1311.blue.elastictech.org/dididighome/add_place.php" method="post" enctype="multipart/form-data" class="needs-validation" style="margin-top: 2em">
 
             <div class="mb-3">
                 <label for="formControlInputPlaceName" class="form-label">Название места</label>
-                <input type="text" name="place_name" class="form-control form-control-lg" id="formControlInputPlaceName" placeholder="Название места">
+                <input type="text" name="place_name" class="form-control form-control-lg" id="formControlInputPlaceName" placeholder="Название места" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="formControlInputDescription" class="form-label">Текстовое описание</label>
+                <textarea name="description" class="form-control" id="formControlInputDescription" rows="8" aria-labelledby="descriptionHelpBlock" required></textarea>
+                <div id="descriptionHelpBlock" class="form-text">Опишите основную информацию о месте, которая может интересовать потенциальных посетителей: что из себя представляет внутреннее пространство, как происходит обслуживание, говорят ли сотрудники на русском или английском, есть ли туалет, кондиционер, оплата по карте, доставка, пример цены на какой-нибудь товар или услугу. Пишите обезличенно, избегая личных местоимений.</div>
             </div>
 
             <div class="mb-3">
@@ -48,13 +54,13 @@
 
             <div class="mb-3">
                 <label for="formControlInputYandexMaps" class="form-label">Ссылка на Яндекс</label>
-                <input type="text" name="yandex_maps" id="formControlInputYandexMaps" class="form-control" aria-labelledby="yandexMapsHelpBlock" placeholder="https://yandex.com.ge/maps/-/...">
+                <input type="text" name="yandex_maps" id="formControlInputYandexMaps" class="form-control" aria-labelledby="yandexMapsHelpBlock" placeholder="https://yandex.com.ge/maps/-/..." required>
                 <div id="yandexMapsHelpBlock" class="form-text">Метка на <a href="https://yandex.com.ge/maps" target="_blank">Яндекс Картах</a></div>
             </div>
 
             <div class="mb-3">
                 <label for="formControlInputGoogleMaps" class="form-label">Ссылка на Google</label>
-                <input type="text" name="google_maps" id="formControlInputGoogleMaps" class="form-control" aria-labelledby="googleMapsHelpBlock" placeholder="https://goo.gl/maps/...">
+                <input type="text" name="google_maps" id="formControlInputGoogleMaps" class="form-control" aria-labelledby="googleMapsHelpBlock" placeholder="https://goo.gl/maps/..." required>
                 <div id="googleMapsHelpBlock" class="form-text">Метка на <a href="https://www.google.com/maps" target="_blank">Google Maps</a></div>
             </div>
 
@@ -65,24 +71,18 @@
 
             <div class="mb-3">
                 <label for="formControlInputWorkHours" class="form-label">Время работы</label>
-                <input type="text" name="work_hours" id="formControlInputWorkHours" class="form-control" placeholder="Ежедневно с ... до ...">
+                <input type="text" name="work_hours" id="formControlInputWorkHours" class="form-control" placeholder="Ежедневно с ... до ..." required>
             </div>
 
             <div class="mb-3">
-                <label for="formControlInputPhone" class="form-label">Номер телефона (можно несколько)</label>
+                <label for="formControlInputPhone" class="form-label">Номер телефона (если есть, можно несколько)</label>
                 <input type="text" name="phone" id="formControlInputPhone" class="form-control" placeholder="+995...">
             </div>
 
             <div class="mb-3">
                 <label for="formControlInputPhotos" class="form-label">Фотографий места (внутри, снаружи, меню, прайс-лист)</label>
-                <input type="file" name="photos[]" id="formControlInputPhotos" class="form-control" aria-labelledby="photosHelpBlock" multiple>
+                <input type="file" name="photos[]" id="formControlInputPhotos" class="form-control" aria-labelledby="photosHelpBlock" multiple required>
                 <div id="photosHelpBlock" class="form-text">Можно выбрать несколько фотографий (.JPG, .PNG), до 20 файлов, до 100 Мб суммарно</div>
-            </div>
-
-            <div class="mb-3">
-                <label for="formControlInputDescription" class="form-label">Текстовое описание</label>
-                <textarea name="description" class="form-control" id="formControlInputDescription" rows="8" aria-labelledby="descriptionHelpBlock"></textarea>
-                <div id="descriptionHelpBlock" class="form-text">Опишите основную информацию о месте, которая может интересовать потенциальных посетителей: что из себя представляет внутреннее пространство, как происходит обслуживание, говорят ли сотрудники на русском или английском, есть ли туалет, кондиционер, оплата по карте, доставка, пример цены на какой-нибудь товар или услугу. Пишите обезличенно, избегая личных местоимений.</div>
             </div>
 
             <div class="mb-4">
@@ -91,9 +91,32 @@
                 <div id="noteHelpBlock" class="form-text">Напишите кто вы в чате, ваш контакт и нужна ли вам обратная связь.</div>
             </div>
 
-            <button type="submit" class="btn btn-primary" aria-labelledby="submitHelpBlock">Отправить на проверку</button>
+            <button type="submit" id="formBtnSubmit" class="btn btn-primary" aria-labelledby="submitHelpBlock">Отправить на проверку</button>
             <div id="submitHelpBlock" class="form-text">Сервер загрузки порой бывает медленный, загрузка может занять до нескольких минут, наберитесь терпения и дождитесь окончания.</div>
         </form>
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+
+                            form.classList.add('was-validated');
+                        }, false)
+                    })
+            })()
+        </script>
 
 
     </article>
