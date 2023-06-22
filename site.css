@@ -39,7 +39,7 @@ body > header h2 a:hover {
 }
 
 /* Page wrapper */
-section#main {
+section#main, footer > section {
     max-width: 1200px;
     margin: auto;
 }
@@ -71,6 +71,19 @@ section#main > article > header h1 {
     font-size: 120%;
     font-weight: bold;
     margin-bottom: 0.5em;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #eee;
+    padding: 1em 1em;
+    margin: 1em -1em -1em -1em;
+}
+footer, footer a {
+    color: #ccc;
+}
+footer a:hover {
+    color: #999;
 }
 
 /* Photo gallery */
