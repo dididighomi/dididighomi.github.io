@@ -120,6 +120,20 @@ table#place_details tr td:first-child {
     font-weight: bold;
 }
 
+table.place-details {
+    min-width: 60%;
+}
+table.place-details tr td {
+    vertical-align: top;
+}
+table.place-details tr td:first-child {
+    text-align: right;
+    padding-right: 0.5em;
+    color: #666;
+    font-weight: bold;
+}
+
+
 
 section.places {
     display: flex;
