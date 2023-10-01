@@ -21,7 +21,7 @@ body > header {
     background-position: center center;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    margin: -1em 0 1em 0;
+    margin: -1em -1em 1em -1em;
     padding: 36px 12px;
 }
 body > header #breadcrumbs {
