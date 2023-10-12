@@ -1,0 +1,17 @@
+{
+    "form": {
+        "place_name": "Мясная лавка Sufra",
+        "description": "Мясной магазин: говядина, свинина, курица",
+        "place_address": "улица Иоанэ Петрици",
+        "yandex_maps": "https:\/\/yandex.com.ge\/maps\/-\/CLwAAlr",
+        "google_maps": "https:\/\/goo.gl\/maps\/wdKKYyEidHqLCnB56",
+        "links": "",
+        "work_hours": "каждый день 09:00 — 21:00",
+        "phone": "",
+        "note": ""
+    },
+    "photos": [
+        "2023-06-22 18-55-18.JPG",
+        "2023-06-22 18-55-34.JPG"
+    ]
+}

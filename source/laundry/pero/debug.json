@@ -1,0 +1,101 @@
+{
+    "server": {
+        "USER": "u1311",
+        "HOME": "\/home\/u1311",
+        "HTTP_ACCEPT_LANGUAGE": "en-US,en;q=0.9,ru;q=0.8",
+        "HTTP_ACCEPT_ENCODING": "gzip, deflate, br",
+        "HTTP_REFERER": "https:\/\/dididighomi.ge\/",
+        "HTTP_SEC_FETCH_DEST": "document",
+        "HTTP_SEC_FETCH_USER": "?1",
+        "HTTP_SEC_FETCH_MODE": "navigate",
+        "HTTP_SEC_FETCH_SITE": "cross-site",
+        "HTTP_ACCEPT": "text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/avif,image\/webp,image\/apng,*\/*;q=0.8,application\/signed-exchange;v=b3;q=0.7",
+        "HTTP_USER_AGENT": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/114.0.0.0 Safari\/537.36",
+        "HTTP_CONTENT_TYPE": "multipart\/form-data; boundary=----WebKitFormBoundarySIp2E5mb2ie9pYLu",
+        "HTTP_UPGRADE_INSECURE_REQUESTS": "1",
+        "HTTP_DNT": "1",
+        "HTTP_ORIGIN": "https:\/\/dididighomi.ge",
+        "HTTP_SEC_CH_UA_PLATFORM": "\"Windows\"",
+        "HTTP_SEC_CH_UA_MOBILE": "?0",
+        "HTTP_SEC_CH_UA": "\"Not.A\/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+        "HTTP_CACHE_CONTROL": "no-cache",
+        "HTTP_PRAGMA": "no-cache",
+        "HTTP_CONTENT_LENGTH": "16347568",
+        "HTTP_HOST": "u1311.blue.elastictech.org",
+        "SCRIPT_FILENAME": "\/home\/u1311\/domains\/u1311.blue.elastictech.org\/dididighome\/add_place.php",
+        "REDIRECT_STATUS": "200",
+        "SERVER_NAME": "u1311.blue.elastictech.org",
+        "SERVER_PORT": "443",
+        "SERVER_ADDR": "134.0.116.211",
+        "REMOTE_PORT": "6906",
+        "REMOTE_ADDR": "212.58.103.25",
+        "SERVER_SOFTWARE": "nginx\/1.18.0",
+        "GATEWAY_INTERFACE": "CGI\/1.1",
+        "HTTPS": "on",
+        "REQUEST_SCHEME": "https",
+        "SERVER_PROTOCOL": "HTTP\/2.0",
+        "DOCUMENT_ROOT": "\/home\/u1311\/domains\/u1311.blue.elastictech.org",
+        "DOCUMENT_URI": "\/dididighome\/add_place.php",
+        "REQUEST_URI": "\/dididighome\/add_place.php",
+        "SCRIPT_NAME": "\/dididighome\/add_place.php",
+        "CONTENT_LENGTH": "16347568",
+        "CONTENT_TYPE": "multipart\/form-data; boundary=----WebKitFormBoundarySIp2E5mb2ie9pYLu",
+        "REQUEST_METHOD": "POST",
+        "QUERY_STRING": "",
+        "FCGI_ROLE": "RESPONDER",
+        "PHP_SELF": "\/dididighome\/add_place.php",
+        "REQUEST_TIME_FLOAT": 1687434029.434422,
+        "REQUEST_TIME": 1687434029
+    },
+    "post": {
+        "place_name": "Прачечная\/химчистка \"Pero\"",
+        "description": "Весьма неплохая прачечная, где вам постирают и погладят одежду, постельное бельё, одеяла и т.п. Даже при наличии у вас дома стиральной машины, ими имеет смысл пользоваться, т.к. у них есть профессиональная сушильная машина, плюс не всем охота возиться с сушкой двуспальных комплектов белья. Стоимость 7 лари за кг (без разницы что вы сдаёте), при этом глажка уже входит в стоимость. Гладят в том числе и полотенца, чтобы они сохраняли мягкость. Вещи на выходе получаются почти такими же, как они были новыми. Готовность обычно от 1 до 3-4 дней в зависимости от объёма.\r\n\r\nПо-русски почти не говорят, только по-английски. Доступна оплата по карте.",
+        "place_address": "ул. Иоанэ Петрици, 1",
+        "yandex_maps": "https:\/\/yandex.com.ge\/maps\/-\/CCUDBYca~D",
+        "google_maps": "https:\/\/goo.gl\/maps\/MCw65GJHwgqjMPdn8",
+        "links": "",
+        "work_hours": "Пн-Пт: 10:30 — 19:00, Сб: 10:30 — 16:00, Вс: выходной",
+        "phone": "+995 579 59 49 94, +995 579 25 44 00, +995 592 15 33 66",
+        "note": ""
+    },
+    "files": {
+        "photos": {
+            "name": [
+                "2023-03-17 19-06-40.JPG",
+                "2023-03-17 19-13-36.JPG",
+                "2023-03-17 19-14-00.JPG",
+                "2023-04-06 21-06-30.JPG"
+            ],
+            "full_path": [
+                "2023-03-17 19-06-40.JPG",
+                "2023-03-17 19-13-36.JPG",
+                "2023-03-17 19-14-00.JPG",
+                "2023-04-06 21-06-30.JPG"
+            ],
+            "type": [
+                "image\/jpeg",
+                "image\/jpeg",
+                "image\/jpeg",
+                "image\/jpeg"
+            ],
+            "tmp_name": [
+                "\/home\/u1311\/tmp\/phplVJREn",
+                "\/home\/u1311\/tmp\/phpAVXscp",
+                "\/home\/u1311\/tmp\/phpi2b6No",
+                "\/home\/u1311\/tmp\/phpmXnQun"
+            ],
+            "error": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "size": [
+                3886138,
+                4418252,
+                3581089,
+                4459114
+            ]
+        }
+    }
+}

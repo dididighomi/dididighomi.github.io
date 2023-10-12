@@ -1,0 +1,44 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+
+?>
+<header>
+    <h1>Магазин ZooCity</h1>
+</header>
+
+<p>Стандартный магазин товаров для животных: корма, миски, лежанки, ошейники.</p>
+
+<?= $this->fetch('place-brief', [
+    'address' => 'ул. Царя Мириана, 37А',
+    'yandexLink' => 'https://yandex.com.ge/maps/-/CLsdZ~B',
+    'googleLink' => 'https://goo.gl/maps/ZQoHt6Km8rbRNsrY8',
+    'links' => [
+    ],
+    'workHours' => 'Ежедневно 10:00 -- 20:00',
+    'phones' => [
+    ],
+]) ?>
+
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'gallery-1',
+]) ?>
+
+        <hr>
+
+<?= $this->fetch('place-brief', [
+    'address' => 'ул. Иоанэ Петрици, 7',
+    'yandexLink' => 'https://yandex.com.ge/maps/-/CLslBjA',
+    'googleLink' => 'https://goo.gl/maps/R5TjtjvBRVLuvaby8',
+    'links' => [
+    ],
+    'workHours' => 'Ежедневно 10:00 -- 20:00',
+    'phones' => [
+    ],
+]) ?>
+
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'gallery-2',
+]) ?>

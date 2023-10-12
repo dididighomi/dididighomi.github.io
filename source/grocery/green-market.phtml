@@ -1,0 +1,31 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+
+?>
+<header>
+    <h1>Продуктовый магазин Green Market</h1>
+
+</header>
+
+<p>Большой выбор овощей и мяса. Мясо, при необходимости, превратят в фарш. Ну и уже накрученный фарш тоже есть. Есть много заморозки: рыба, хинкали, вареники, а так же крупы, сыры, вино, соки, яйца домашние. Ну и по мелочи всякое, типа хлеба и минералки. Недавно появилась ещё и готовая еда.</p>
+
+<?= $this->fetch('place-brief', [
+    'address' => 'ул. Петра Иберийского, 6',
+    'yandexLink' => 'https://yandex.com.ge/maps/-/CCUDmKVZTD',
+    'googleLink' => 'https://goo.gl/maps/9vPmz6y9MDin62kg9',
+    'links' => [
+        ['https://facebook.com/profile.php?id=100063754175124', 'Facebook'],
+    ],
+    'workHours' => 'Ежедневно 09:00 -- 22:00',
+    'phones' => [
+        '+995 593 36 38 41',
+    ],
+]) ?>
+
+<p>Фотографии взяты из Facebook.</p>
+
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'gallery',
+]) ?>

@@ -1,0 +1,20 @@
+{
+    "form": {
+        "place_name": "Магазин ZooCity",
+        "description": ".",
+        "place_address": "улица Царя Мириана, 37А",
+        "yandex_maps": "https:\/\/yandex.com.ge\/maps\/-\/CLsdZ~B",
+        "google_maps": "https:\/\/goo.gl\/maps\/ZQoHt6Km8rbRNsrY8",
+        "links": "",
+        "work_hours": "Ежедневно 10:00 — 20:00",
+        "phone": "",
+        "note": ""
+    },
+    "photos": [
+        "2023-06-21 15-25-50.JPG",
+        "2023-06-21 15-26-00.JPG",
+        "2023-06-21 17-32-56.JPG",
+        "2023-06-22 18-57-24.JPG",
+        "2023-06-22 18-57-42.JPG"
+    ]
+}

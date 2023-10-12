@@ -1,0 +1,26 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+
+?>
+<header>
+    <h1>Мясная лавка Sufra</h1>
+</header>
+
+<p>Мясной магазин: говядина, свинина, курица</p>
+
+<?= $this->fetch('place-brief', [
+    'address' => 'улица Иоанэ Петрици', // TODO: Где именно?
+    'yandexLink' => 'https://yandex.com.ge/maps/-/CLwAAlr',
+    'googleLink' => 'https://goo.gl/maps/wdKKYyEidHqLCnB56',
+    'links' => [
+    ],
+    'workHours' => 'Ежедневно 09:00 -- 21:00',
+    'phones' => [
+    ],
+]) ?>
+
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'gallery',
+]) ?>

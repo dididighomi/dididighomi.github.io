@@ -1,0 +1,16 @@
+{
+    "require": {
+        "php": ">=8.0",
+        "ext-mbstring": "*",
+        "vlucas/phpdotenv": "^2.6",
+        "luracast/config": "^2.0",
+        "league/plates": "^3.5",
+        "ext-gd": "*",
+        "ext-exif": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

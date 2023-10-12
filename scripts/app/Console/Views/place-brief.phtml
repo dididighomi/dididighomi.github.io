@@ -1,0 +1,70 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+/** @var string|null $address */
+/** @var string|null $yandexLink */
+/** @var string|null $googleLink */
+/** @var array|null $links */
+/** @var string $workHours */
+/** @var string[] $phones */
+
+/**
+ * @param string $text
+ * @return string
+ */
+$mdash = function(string $text): string
+{
+    return preg_replace('/--/', '&mdash;', $text);
+}
+
+?>
+<table class="place-details">
+    <tr>
+        <td>Адрес:</td>
+        <td><?= $this->e($address) ?> (<a href="<?= $this->e($yandexLink) ?>" target="_blank">Яндекс</a> <i style="color: #999" class="bi bi-box-arrow-up-right"></i>,
+            <a href="<?= $this->e($googleLink) ?>" target="_blank">Google</a> <i style="color: #999" class="bi bi-box-arrow-up-right"></i>)</td>
+    </tr>
+<?php if (!empty($links)) { ?>
+    <tr>
+        <td>Ссылки:</td>
+        <td>
+<?php
+
+$htmlLinks = [];
+foreach ($links as $linkData) {
+    $htmlLinks[] = '<a href="' . $this->e($linkData[0]) . '">' . $this->e($linkData[1]) . '</a>' . (!empty($linkData[2]) ? " ({$linkData[2]})" : '');
+}
+echo $this->indent(implode("<br>\n", $htmlLinks), 12);
+
+?>
+        </td>
+    </tr>
+<?php } ?>
+<?php if ($workHours != '') { ?>
+    <tr>
+        <td>Время работы:</td>
+        <td><?= $mdash($this->e($workHours)) ?></td>
+    </tr>
+<?php } ?>
+<?php if (!empty($phones)) { ?>
+    <tr>
+        <td>Телефон:</td>
+        <td><?php
+
+            $htmlPhones = [];
+            foreach ($phones as $phone) {
+                if (is_array($phone)) {
+                    $phoneNumber = $phone[0];
+                    $phoneComment = $phone[1];
+                } else {
+                    $phoneNumber = $phone;
+                    $phoneComment = null;
+                }
+                $htmlPhones[] = '<a href="tel:' . str_replace(' ', '', $phoneNumber) . '">' . $this->e($phoneNumber) . '</a>' . ($phoneComment !== null ? ' (' . $this->e($phoneComment) . ')' : '');
+            }
+            echo implode(', ', $htmlPhones);
+
+            ?></td>
+    </tr>
+<?php } ?>
+</table>

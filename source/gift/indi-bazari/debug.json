@@ -1,0 +1,87 @@
+{
+    "server": {
+        "USER": "u1311",
+        "HOME": "\/home\/u1311",
+        "HTTP_ACCEPT_LANGUAGE": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,ka;q=0.6",
+        "HTTP_ACCEPT_ENCODING": "gzip, deflate, br",
+        "HTTP_REFERER": "https:\/\/dididighomi.ge\/",
+        "HTTP_SEC_FETCH_DEST": "document",
+        "HTTP_SEC_FETCH_USER": "?1",
+        "HTTP_SEC_FETCH_MODE": "navigate",
+        "HTTP_SEC_FETCH_SITE": "cross-site",
+        "HTTP_ACCEPT": "text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/avif,image\/webp,image\/apng,*\/*;q=0.8,application\/signed-exchange;v=b3;q=0.7",
+        "HTTP_USER_AGENT": "Mozilla\/5.0 (Linux; Android 10; K) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/114.0.0.0 Mobile Safari\/537.36",
+        "HTTP_CONTENT_TYPE": "multipart\/form-data; boundary=----WebKitFormBoundarybKsiBfADputBDmt7",
+        "HTTP_ORIGIN": "https:\/\/dididighomi.ge",
+        "HTTP_UPGRADE_INSECURE_REQUESTS": "1",
+        "HTTP_SEC_CH_UA_PLATFORM": "\"Android\"",
+        "HTTP_SEC_CH_UA_MOBILE": "?1",
+        "HTTP_SEC_CH_UA": "\"Not.A\/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+        "HTTP_CACHE_CONTROL": "max-age=0",
+        "HTTP_CONTENT_LENGTH": "5353292",
+        "HTTP_HOST": "u1311.blue.elastictech.org",
+        "SCRIPT_FILENAME": "\/home\/u1311\/domains\/u1311.blue.elastictech.org\/dididighome\/add_place.php",
+        "REDIRECT_STATUS": "200",
+        "SERVER_NAME": "u1311.blue.elastictech.org",
+        "SERVER_PORT": "443",
+        "SERVER_ADDR": "134.0.116.211",
+        "REMOTE_PORT": "8899",
+        "REMOTE_ADDR": "185.70.54.114",
+        "SERVER_SOFTWARE": "nginx\/1.18.0",
+        "GATEWAY_INTERFACE": "CGI\/1.1",
+        "HTTPS": "on",
+        "REQUEST_SCHEME": "https",
+        "SERVER_PROTOCOL": "HTTP\/2.0",
+        "DOCUMENT_ROOT": "\/home\/u1311\/domains\/u1311.blue.elastictech.org",
+        "DOCUMENT_URI": "\/dididighome\/add_place.php",
+        "REQUEST_URI": "\/dididighome\/add_place.php",
+        "SCRIPT_NAME": "\/dididighome\/add_place.php",
+        "CONTENT_LENGTH": "5353292",
+        "CONTENT_TYPE": "multipart\/form-data; boundary=----WebKitFormBoundarybKsiBfADputBDmt7",
+        "REQUEST_METHOD": "POST",
+        "QUERY_STRING": "",
+        "FCGI_ROLE": "RESPONDER",
+        "PHP_SELF": "\/dididighome\/add_place.php",
+        "REQUEST_TIME_FLOAT": 1689231546.072155,
+        "REQUEST_TIME": 1689231546
+    },
+    "post": {
+        "place_name": "Indi Bazari",
+        "description": "IndiBazari - онлайн-магазин.\r\n\r\nБольшой выбор ярких и ароматных подарков для себя и близких:\r\n\r\n- Более 500 благовоний из Индии, Тибета, Китая, Гоа (Satya, HEM, Ramakrishna, Mandala Art и др.)\r\n- смоляной и ароматный ПАЛО САНТО\r\n- калифорнийский Белый Шалфей\r\n- аромалампы\r\n- эфирные масла\r\n- фигурные свечи\r\n- статуэтки божеств\r\n- ловцы снов и серьги из перьев ручной работы\r\n- тибетские флажки\r\n- индийские хлопковые панно и сумки\r\n- индийские копилки и кошельки из кожи\r\n- хна для мехенди\r\n- подвески Фен-Шуй и многое другое\r\n\r\n📦 Быстрая доставка по Тбилиси!\r\n \r\nЕсть самовывоз и возможность познакомиться с ароматами и товарами!",
+        "place_address": "А.Белиашвили,1, ориентир парк Братислава ",
+        "yandex_maps": "https:\/\/yandex.ru\/maps?whatshere%5Bpoint%5D=44.777535%2C41.754626&whatshere%5Bzoom%5D=18.563232&ll=44.77753508095065%2C41.75462614440714&z=18.563232",
+        "google_maps": "Нет",
+        "links": "https:\/\/instagram.com\/indibazari",
+        "work_hours": "12:00-24:00",
+        "phone": "",
+        "note": "@klf_ka\r\n\r\nУ нас онлайн магазин и метки на картах нет. Самовывоз есть и я просто показала где он на карте))"
+    },
+    "files": {
+        "photos": {
+            "name": [
+                "IMG_20230713_105435_792.jpg",
+                "IMG_20230617_125726.jpg"
+            ],
+            "full_path": [
+                "IMG_20230713_105435_792.jpg",
+                "IMG_20230617_125726.jpg"
+            ],
+            "type": [
+                "image\/jpeg",
+                "image\/jpeg"
+            ],
+            "tmp_name": [
+                "\/home\/u1311\/tmp\/phpjLoFbn",
+                "\/home\/u1311\/tmp\/phpGDXiSm"
+            ],
+            "error": [
+                0,
+                0
+            ],
+            "size": [
+                344552,
+                5005979
+            ]
+        }
+    }
+}

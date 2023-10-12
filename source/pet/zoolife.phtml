@@ -1,0 +1,30 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+
+?>
+<header>
+    <h1>Магазин ZooLife</h1>
+</header>
+
+<p>Стандартный магазин товаров для животных: корма, миски, лежанки, ошейники.</p>
+
+<?= $this->fetch('place-brief', [
+    'address' => 'ул. Царя Мириана, 33А',
+    'yandexLink' => 'https://yandex.com.ge/maps/-/CLs-r7D',
+    'googleLink' => 'https://goo.gl/maps/Nmeik11d2PkfFTFe8',
+    'links' => [
+        ['https://www.facebook.com/profile.php?id=100063596333301', 'facebook.com'],
+        ['https://www.instagram.com/zoolife_pet_store/', 'instagram.com/zoolife_pet_store'],
+        ['https://zoolife.ge/', 'zoolife.ge'],
+    ],
+    'workHours' => 'Ежедневно',
+    'phones' => [
+        '+995 577 12 27 78', '+995 577 34 58 30',
+    ],
+]) ?>
+
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'gallery',
+]) ?>

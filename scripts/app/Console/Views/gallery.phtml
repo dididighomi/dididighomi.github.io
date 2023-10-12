@@ -1,0 +1,28 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+/** @var string $path */
+/** @var string $gallery */
+
+$galleryData = require($this->config('app.sourceDir') . '/' . $path . '/gallery.php');
+
+$rawUrlEncodeAllButSlashes = function(string $path): string {
+    return implode('/', array_map(function ($v) {
+        return rawurlencode($v);
+    }, explode('/', $path)));
+}
+
+?>
+<section class="gallery">
+<?php foreach ($galleryData[$gallery] as $photo) {
+    if (is_array($photo)) {
+        $url = "/{$path}/" . $rawUrlEncodeAllButSlashes($photo[0]);
+        $alt = $photo[1] ?? '';
+    } else {
+        $url = "/{$path}/" . $rawUrlEncodeAllButSlashes($photo);
+        $alt = '';
+    }
+    ?>
+    <div><a href="<?= $this->e($url) ?>"><img src="<?= $this->e($url) ?>" alt="<?= $this->e($alt) ?>" class="img-fluid img-thumbnail" data-fancybox="<?= $this->e($gallery) ?>"></a></div>
+<?php } ?>
+</section>

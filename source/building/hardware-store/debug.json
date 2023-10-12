@@ -1,0 +1,100 @@
+{
+    "server": {
+        "USER": "u1311",
+        "HOME": "\/home\/u1311",
+        "HTTP_ACCEPT_LANGUAGE": "en-US,en;q=0.9,ru;q=0.8",
+        "HTTP_ACCEPT_ENCODING": "gzip, deflate, br",
+        "HTTP_REFERER": "http:\/\/dididighomi.ge\/",
+        "HTTP_SEC_FETCH_DEST": "document",
+        "HTTP_SEC_FETCH_USER": "?1",
+        "HTTP_SEC_FETCH_MODE": "navigate",
+        "HTTP_SEC_FETCH_SITE": "cross-site",
+        "HTTP_ACCEPT": "text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/avif,image\/webp,image\/apng,*\/*;q=0.8,application\/signed-exchange;v=b3;q=0.7",
+        "HTTP_USER_AGENT": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/114.0.0.0 Safari\/537.36",
+        "HTTP_CONTENT_TYPE": "multipart\/form-data; boundary=----WebKitFormBoundary8gPS28v1BKYbPyRP",
+        "HTTP_UPGRADE_INSECURE_REQUESTS": "1",
+        "HTTP_DNT": "1",
+        "HTTP_ORIGIN": "http:\/\/dididighomi.ge",
+        "HTTP_SEC_CH_UA_PLATFORM": "\"Windows\"",
+        "HTTP_SEC_CH_UA_MOBILE": "?0",
+        "HTTP_SEC_CH_UA": "\"Not.A\/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+        "HTTP_CACHE_CONTROL": "max-age=0",
+        "HTTP_CONTENT_LENGTH": "17902746",
+        "HTTP_HOST": "u1311.blue.elastictech.org",
+        "SCRIPT_FILENAME": "\/home\/u1311\/domains\/u1311.blue.elastictech.org\/dididighome\/add_place.php",
+        "REDIRECT_STATUS": "200",
+        "SERVER_NAME": "u1311.blue.elastictech.org",
+        "SERVER_PORT": "443",
+        "SERVER_ADDR": "134.0.116.211",
+        "REMOTE_PORT": "8320",
+        "REMOTE_ADDR": "212.58.103.25",
+        "SERVER_SOFTWARE": "nginx\/1.18.0",
+        "GATEWAY_INTERFACE": "CGI\/1.1",
+        "HTTPS": "on",
+        "REQUEST_SCHEME": "https",
+        "SERVER_PROTOCOL": "HTTP\/2.0",
+        "DOCUMENT_ROOT": "\/home\/u1311\/domains\/u1311.blue.elastictech.org",
+        "DOCUMENT_URI": "\/dididighome\/add_place.php",
+        "REQUEST_URI": "\/dididighome\/add_place.php",
+        "SCRIPT_NAME": "\/dididighome\/add_place.php",
+        "CONTENT_LENGTH": "17902746",
+        "CONTENT_TYPE": "multipart\/form-data; boundary=----WebKitFormBoundary8gPS28v1BKYbPyRP",
+        "REQUEST_METHOD": "POST",
+        "QUERY_STRING": "",
+        "FCGI_ROLE": "RESPONDER",
+        "PHP_SELF": "\/dididighome\/add_place.php",
+        "REQUEST_TIME_FLOAT": 1689450136.761261,
+        "REQUEST_TIME": 1689450136
+    },
+    "post": {
+        "place_name": "Строительные материалы",
+        "description": "Маленький магазинчик со стройматериалами: сантехника, электрика, скобяные изделия, разные мелочи.",
+        "place_address": "улица Иоанэ Петрици, 15",
+        "yandex_maps": "https:\/\/yandex.com.ge\/maps\/-\/CLsXYjA",
+        "google_maps": "https:\/\/goo.gl\/maps\/xLFBnmKnm19jHPB37",
+        "links": "",
+        "work_hours": "Неизвестно",
+        "phone": "",
+        "note": ""
+    },
+    "files": {
+        "photos": {
+            "name": [
+                "2023-06-22 18-48-44.JPG",
+                "2023-06-22 18-50-00.JPG",
+                "2023-06-22 18-51-59.JPG",
+                "2023-06-22 18-52-14.JPG"
+            ],
+            "full_path": [
+                "2023-06-22 18-48-44.JPG",
+                "2023-06-22 18-50-00.JPG",
+                "2023-06-22 18-51-59.JPG",
+                "2023-06-22 18-52-14.JPG"
+            ],
+            "type": [
+                "image\/jpeg",
+                "image\/jpeg",
+                "image\/jpeg",
+                "image\/jpeg"
+            ],
+            "tmp_name": [
+                "\/home\/u1311\/tmp\/phpCogzoK",
+                "\/home\/u1311\/tmp\/phpQloUxJ",
+                "\/home\/u1311\/tmp\/php6ss3ZJ",
+                "\/home\/u1311\/tmp\/phpqUKCGL"
+            ],
+            "error": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "size": [
+                3778929,
+                4910643,
+                4815804,
+                4395479
+            ]
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+
+?>
+<header>
+    <h1>Строительные материалы</h1>
+</header>
+
+<p>Маленький магазинчик со стройматериалами: сантехника, электрика, скобяные изделия, разные мелочи. Прошу прощения за смазанное фото.</p>
+
+<?= $this->fetch('place-brief', [
+    'address' => 'ул. Иоанэ Петрици, 15',
+    'yandexLink' => 'https://yandex.com.ge/maps/-/CLsXYjA',
+    'googleLink' => 'https://goo.gl/maps/xLFBnmKnm19jHPB37',
+    'links' => [
+    ],
+    'workHours' => '',
+    'phones' => [
+    ],
+]) ?>
+
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'gallery',
+]) ?>

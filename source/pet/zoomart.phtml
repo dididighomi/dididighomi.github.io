@@ -1,0 +1,27 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+
+?>
+<header>
+    <h1>Магазин ZooMart</h1>
+</header>
+
+<p>Стандартный магазин товаров для животных: корма, миски, лежанки, ошейники.</p>
+
+<?= $this->fetch('place-brief', [
+    'address' => 'ул. Царя Мириана, 39А',
+    'yandexLink' => 'https://yandex.com.ge/maps/-/CLshAkT',
+    'googleLink' => 'https://goo.gl/maps/YTAbNtQcBfmaRHdD8',
+    'links' => [
+    ],
+    'workHours' => 'Ежедневно 10:00 -- 21:00',
+    'phones' => [
+        '+995 599 52 52 52',
+    ],
+]) ?>
+
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'gallery',
+]) ?>

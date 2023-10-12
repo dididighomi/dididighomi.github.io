@@ -1,0 +1,32 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+
+?>
+<header>
+    <div><img src="/sport/tonus-gym/tonus-gym.jpg" alt="Logo" class="img-fluid"></div>
+    <h1>Тренажёрный зал Tonus Gym</h1>
+</header>
+
+<p>Очень популярный тренажёрный зал, в нём всегда полно народу. Но, возможно, в этом и его недостаток — на нужные тренажёры может быть очередь. Пользователи Телеграм жалуются на то, что зал очень маленький, раздевалка вообще микроскопическая, парковка вечно забита. Не так много народу в утренние часы. Тренажёры уставшие, но рабочие, чинят если ломаются.</p>
+
+<p>Стоимость разового посещения 20 лари. Абонемент на 1 месяц 99 лари, на 3 месяца 199 лари, 6 месяцев 349 лари. Также есть вариант абонемента на 1 месяц с утренним посещением с 08 до 15 за 79 лари. Все абонементы включают по 3 вводных занятия с тренером.</p>
+
+<?= $this->fetch('place-brief', [
+    'address' => 'ул. Царя Мириана, 14',
+    'yandexLink' => 'https://yandex.com.ge/maps/-/CCUDEFxJoA',
+    'googleLink' => 'https://goo.gl/maps/usF8cyD5GVq9BQhV8',
+    'links' => [
+        ['https://tonus.ge/', 'tonus.ge'],
+        ['https://www.facebook.com/Tonusgymdigomi', 'facebook.com/Tonusgymdigomi'],
+    ],
+    'workHours' => 'Ежедневно 08:00 -- 02:00',
+    'phones' => [
+        '032 219 51 19',
+    ],
+]) ?>
+
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'gallery',
+]) ?>

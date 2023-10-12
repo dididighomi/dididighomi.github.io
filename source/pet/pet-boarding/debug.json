@@ -1,0 +1,81 @@
+{
+    "server": {
+        "USER": "u1311",
+        "HOME": "\/home\/u1311",
+        "HTTP_ACCEPT_LANGUAGE": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+        "HTTP_ACCEPT_ENCODING": "gzip, deflate, br",
+        "HTTP_REFERER": "http:\/\/dididighomi.ge\/",
+        "HTTP_SEC_FETCH_DEST": "document",
+        "HTTP_SEC_FETCH_USER": "?1",
+        "HTTP_SEC_FETCH_MODE": "navigate",
+        "HTTP_SEC_FETCH_SITE": "cross-site",
+        "HTTP_ACCEPT": "text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/avif,image\/webp,image\/apng,*\/*;q=0.8,application\/signed-exchange;v=b3;q=0.7",
+        "HTTP_USER_AGENT": "Mozilla\/5.0 (Linux; Android 10; K) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/114.0.0.0 Mobile Safari\/537.36",
+        "HTTP_CONTENT_TYPE": "multipart\/form-data; boundary=----WebKitFormBoundarylojNlSzWu5QbDsLq",
+        "HTTP_ORIGIN": "http:\/\/dididighomi.ge",
+        "HTTP_UPGRADE_INSECURE_REQUESTS": "1",
+        "HTTP_SEC_CH_UA_PLATFORM": "\"Android\"",
+        "HTTP_SEC_CH_UA_MOBILE": "?1",
+        "HTTP_SEC_CH_UA": "\"Not.A\/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+        "HTTP_CACHE_CONTROL": "max-age=0",
+        "HTTP_CONTENT_LENGTH": "480087",
+        "HTTP_HOST": "u1311.blue.elastictech.org",
+        "SCRIPT_FILENAME": "\/home\/u1311\/domains\/u1311.blue.elastictech.org\/dididighome\/add_place.php",
+        "REDIRECT_STATUS": "200",
+        "SERVER_NAME": "u1311.blue.elastictech.org",
+        "SERVER_PORT": "443",
+        "SERVER_ADDR": "134.0.116.211",
+        "REMOTE_PORT": "33522",
+        "REMOTE_ADDR": "185.167.217.33",
+        "SERVER_SOFTWARE": "nginx\/1.18.0",
+        "GATEWAY_INTERFACE": "CGI\/1.1",
+        "HTTPS": "on",
+        "REQUEST_SCHEME": "https",
+        "SERVER_PROTOCOL": "HTTP\/2.0",
+        "DOCUMENT_ROOT": "\/home\/u1311\/domains\/u1311.blue.elastictech.org",
+        "DOCUMENT_URI": "\/dididighome\/add_place.php",
+        "REQUEST_URI": "\/dididighome\/add_place.php",
+        "SCRIPT_NAME": "\/dididighome\/add_place.php",
+        "CONTENT_LENGTH": "480087",
+        "CONTENT_TYPE": "multipart\/form-data; boundary=----WebKitFormBoundarylojNlSzWu5QbDsLq",
+        "REQUEST_METHOD": "POST",
+        "QUERY_STRING": "",
+        "FCGI_ROLE": "RESPONDER",
+        "PHP_SELF": "\/dididighome\/add_place.php",
+        "REQUEST_TIME_FLOAT": 1689431785.527221,
+        "REQUEST_TIME": 1689431785
+    },
+    "post": {
+        "place_name": "Передержка для собаки",
+        "description": "Живу на самом краю Дигоми, рядом горы. Прекрасное место для прогулок. Со мной добрейший парень бордер-колли, который обожает новых друзей. Обязательно наличие вет.паспорта и прививок. Я опытный собаковладелец. Стоимость 30 лари в сутки, с вас корм. \r\n+995591036534 Валентина",
+        "place_address": "Nikoloz Svanishvili str",
+        "yandex_maps": "1-й переулок Н. Сванишвили, 61 Тбилиси https:\/\/yandex.ru\/maps?whatshere%5Bpoint%5D=44.744389%2C41.797562&whatshere%5Bzoom%5D=16.68198&ll=44.74476214858496%2C41.79808114881092&z=16.68198",
+        "google_maps": "https:\/\/maps.app.goo.gl\/T9AddCY1ANd81aku7",
+        "links": "",
+        "work_hours": "9.00-21.00",
+        "phone": "+995591036534",
+        "note": ""
+    },
+    "files": {
+        "photos": {
+            "name": [
+                "Screenshot_2023-07-15-18-34-02-91_948cd9899890cbd5c2798760b2b95377.jpg"
+            ],
+            "full_path": [
+                "Screenshot_2023-07-15-18-34-02-91_948cd9899890cbd5c2798760b2b95377.jpg"
+            ],
+            "type": [
+                "image\/jpeg"
+            ],
+            "tmp_name": [
+                "\/home\/u1311\/tmp\/phpHTbvmD"
+            ],
+            "error": [
+                0
+            ],
+            "size": [
+                478154
+            ]
+        }
+    }
+}

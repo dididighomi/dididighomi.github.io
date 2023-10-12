@@ -1,0 +1,28 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+
+?>
+<header>
+    <h1>Передержка для собаки</h1>
+</header>
+
+<p>Живу на самом краю Дигоми, рядом горы. Прекрасное место для прогулок. Со мной добрейший парень бордер-колли, который обожает новых друзей. Обязательно наличие вет. паспорта и прививок. Я опытный собаковладелец. Стоимость 30 лари в сутки, с вас корм. </p>
+<p>Валентина</p>
+
+<?= $this->fetch('place-brief', [
+    'address' => '1-й переулок Н. Сванишвили, 61',
+    'yandexLink' => 'https://yandex.com.ge/maps/-/CLsyI~D',
+    'googleLink' => 'https://maps.app.goo.gl/T9AddCY1ANd81aku7',
+    'links' => [
+    ],
+    'workHours' => 'Ежедневно 09:00 -- 21:00',
+    'phones' => [
+        '+995 591036534',
+    ],
+]) ?>
+
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'gallery',
+]) ?>

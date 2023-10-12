@@ -1,0 +1,11 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+/** @var string $source */
+
+$contents = $this->fetch('source::' . $source);
+$this->layout('layouts/default', [
+    'title' => $this->getHeader($contents),
+]);
+
+echo $this->indent($contents, 12);
