@@ -1,0 +1,32 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+
+?>
+<header>
+    <h1>Mimicraft</h1>
+</header>
+
+<p>Изделия ручной работы из дерева, гипса и кожи 🪵🪨🐑<br>
+    Подносы, вазы, бижутерия, сумки, ошейники для собак, декор и тд ✨️<br>
+    Уникальные подарки для всей семьи.</p>
+
+<?= $this->fetch('place-brief', [
+    'address' => 'ул. Марко Поло',
+    'yandexLink' => 'https://yandex.com.ge/maps/-/CDaiE0Jc',
+    'googleLink' => 'https://maps.app.goo.gl/MZ8atByboNFhW2nH8',
+    'links' => [
+        ['https://www.instagram.com/thisismimicraft', 'instagram.com/thisismimicraft'],
+        ['https://www.tiktok.com/@thisismimicraft', 'tiktok.com/@thisismimicraft'],
+        ['https://t.me/katesya', '@katesya'],
+    ],
+    'workHours' => 'Ежедневно 12:00 -- 20:00',
+    'phones' => [
+        '+995 551580212',
+    ],
+]) ?>
+
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'gallery',
+]) ?>

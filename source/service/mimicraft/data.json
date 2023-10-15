@@ -1,0 +1,24 @@
+{
+    "form": {
+        "place_name": "Mimicraft",
+        "description": "Изделия ручной работы из дерева, гипса и кожи 🪵🪨🐑\r\nПодносы, вазы, бижутерия, сумки, ошейники для собак, декор и тд ✨️\r\nУникальные подарки для всей семьи.",
+        "place_address": "Marco Polo st",
+        "yandex_maps": "https:\/\/yandex.com.ge\/maps\/-\/CDaiE0Jc",
+        "google_maps": "https:\/\/maps.app.goo.gl\/MZ8atByboNFhW2nH8",
+        "links": "https:\/\/www.instagram.com\/thisismimicraft\/\r\nhttps:\/\/www.tiktok.com\/@thisismimicraft",
+        "work_hours": "12 до 20",
+        "phone": "+995551580212",
+        "note": "@katesya"
+    },
+    "photos": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+        "6.jpg",
+        "7.jpg",
+        "8.jpg",
+        "9.jpg"
+    ]
+}
