@@ -1,128 +1,123 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Добавление места</title>
-    <base href="/">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="site.css" rel="stylesheet">
+    <link href="/site.css" rel="stylesheet">
     <!-- FancyApps image viewer -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 <body>
-<header>
-    <hgroup>
-        <h1><a href="/">Диди Дигоми, Тбилиси</a></h1>
-        <h2>Краткий путеводитель по району от создателей <a href="https://t.me/dihomi" target="_blank">телеграм-чатика</a></h2>
-    </hgroup>
-</header>
+    <header>
+        <hgroup>
+            <h1><a href="/">Диди Дигоми, Тбилиси</a></h1>
+            <h2>Краткий путеводитель по району от создателей <a href="https://t.me/dihomi" target="_blank">телеграм-чатика</a></h2>
+        </hgroup>
+    </header>
+    <section id="main">
+        <nav>
+            <a href="/">&larr; Главная</a>
+        </nav>
+        <article>
+            <header>
+                <h1>Добавление места</h1>
+            </header>
 
-<section id="main">
-    <nav>
-        <a href="/">&larr; Главная</a>
-    </nav>
+            <p>Чтобы помочь в развитии сайта, вы можете отправить данные о каком-нибудь интересном месте в нашем районе Диди Дигоми. Обязательное условие &mdash; это место должно быть потенциально полезно пользователям нашего <a href="https://t.me/dihomi">телеграм-чата</a> и всем, кто живёт в нашем районе Тбилиси. Размещение полностью бесплатное, но производится в ручном режиме и обычно требуется некоторое время на обработку и принятие решения. Контакт <a href="https://t.me/gugglegum" target="_blank">админа</a> на всякий случай.</p>
 
-    <article>
-        <header>
-            <h1>Добавление места</h1>
-        </header>
+            <form action="https://u1311.blue.elastictech.org/dididighome/add_place.php" method="post" enctype="multipart/form-data" class="needs-validation" style="margin-top: 2em">
 
-        <p>Чтобы помочь в развитии сайта, вы можете отправить данные о каком-нибудь интересном месте в нашем районе Диди Дигоми. Обязательное условие &mdash; это место должно быть потенциально полезно пользователям нашего <a href="https://t.me/dihomi">телеграм-чата</a> и всем, кто живёт в нашем районе Тбилиси. Размещение полностью бесплатное, но производится в ручном режиме и обычно требуется некоторое время на обработку и принятие решения. Контакт <a href="https://t.me/gugglegum" target="_blank">админа</a> на всякий случай.</p>
+                <div class="mb-3">
+                    <label for="formControlInputPlaceName" class="form-label">Название места</label>
+                    <input type="text" name="place_name" class="form-control form-control-lg" id="formControlInputPlaceName" placeholder="Название места" required>
+                </div>
 
-        <form action="https://u1311.blue.elastictech.org/dididighome/add_place.php" method="post" enctype="multipart/form-data" class="needs-validation" style="margin-top: 2em">
+                <div class="mb-3">
+                    <label for="formControlInputDescription" class="form-label">Текстовое описание</label>
+                    <textarea name="description" class="form-control" id="formControlInputDescription" rows="8" aria-labelledby="descriptionHelpBlock" required></textarea>
+                    <div id="descriptionHelpBlock" class="form-text">Опишите основную информацию о месте, которая может интересовать потенциальных посетителей: что из себя представляет внутреннее пространство, как происходит обслуживание, говорят ли сотрудники на русском или английском, есть ли туалет, кондиционер, оплата по карте, доставка, пример цены на какой-нибудь товар или услугу. Пишите обезличенно, избегая личных местоимений.</div>
+                </div>
 
-            <div class="mb-3">
-                <label for="formControlInputPlaceName" class="form-label">Название места</label>
-                <input type="text" name="place_name" class="form-control form-control-lg" id="formControlInputPlaceName" placeholder="Название места" required>
-            </div>
+                <div class="mb-3">
+                    <label for="formControlInputPlaceAddress" class="form-label">Адрес (если есть)</label>
+                    <input type="text" name="place_address" id="formControlInputPlaceAddress" class="form-control" aria-labelledby="placeAddressHelpBlock" placeholder="Улица, дом">
+                    <div id="placeAddressHelpBlock" class="form-text">Желательно на русском языке, как в Яндекс картах</div>
+                </div>
 
-            <div class="mb-3">
-                <label for="formControlInputDescription" class="form-label">Текстовое описание</label>
-                <textarea name="description" class="form-control" id="formControlInputDescription" rows="8" aria-labelledby="descriptionHelpBlock" required></textarea>
-                <div id="descriptionHelpBlock" class="form-text">Опишите основную информацию о месте, которая может интересовать потенциальных посетителей: что из себя представляет внутреннее пространство, как происходит обслуживание, говорят ли сотрудники на русском или английском, есть ли туалет, кондиционер, оплата по карте, доставка, пример цены на какой-нибудь товар или услугу. Пишите обезличенно, избегая личных местоимений.</div>
-            </div>
+                <div class="mb-3">
+                    <label for="formControlInputYandexMaps" class="form-label">Ссылка на Яндекс</label>
+                    <input type="text" name="yandex_maps" id="formControlInputYandexMaps" class="form-control" aria-labelledby="yandexMapsHelpBlock" placeholder="https://yandex.com.ge/maps/-/..." required>
+                    <div id="yandexMapsHelpBlock" class="form-text">Метка на <a href="https://yandex.com.ge/maps" target="_blank">Яндекс Картах</a></div>
+                </div>
 
-            <div class="mb-3">
-                <label for="formControlInputPlaceAddress" class="form-label">Адрес (если есть)</label>
-                <input type="text" name="place_address" id="formControlInputPlaceAddress" class="form-control" aria-labelledby="placeAddressHelpBlock" placeholder="Улица, дом">
-                <div id="placeAddressHelpBlock" class="form-text">Желательно на русском языке, как в Яндекс картах</div>
-            </div>
+                <div class="mb-3">
+                    <label for="formControlInputGoogleMaps" class="form-label">Ссылка на Google</label>
+                    <input type="text" name="google_maps" id="formControlInputGoogleMaps" class="form-control" aria-labelledby="googleMapsHelpBlock" placeholder="https://goo.gl/maps/..." required>
+                    <div id="googleMapsHelpBlock" class="form-text">Метка на <a href="https://www.google.com/maps" target="_blank">Google Maps</a></div>
+                </div>
 
-            <div class="mb-3">
-                <label for="formControlInputYandexMaps" class="form-label">Ссылка на Яндекс</label>
-                <input type="text" name="yandex_maps" id="formControlInputYandexMaps" class="form-control" aria-labelledby="yandexMapsHelpBlock" placeholder="https://yandex.com.ge/maps/-/..." required>
-                <div id="yandexMapsHelpBlock" class="form-text">Метка на <a href="https://yandex.com.ge/maps" target="_blank">Яндекс Картах</a></div>
-            </div>
+                <div class="mb-3">
+                    <label for="formControlInputLinks" class="form-label">Сайт, соцсети (facebook, instagram, если есть)</label>
+                    <textarea name="links" class="form-control" id="formControlInputLinks" rows="3"></textarea>
+                </div>
 
-            <div class="mb-3">
-                <label for="formControlInputGoogleMaps" class="form-label">Ссылка на Google</label>
-                <input type="text" name="google_maps" id="formControlInputGoogleMaps" class="form-control" aria-labelledby="googleMapsHelpBlock" placeholder="https://goo.gl/maps/..." required>
-                <div id="googleMapsHelpBlock" class="form-text">Метка на <a href="https://www.google.com/maps" target="_blank">Google Maps</a></div>
-            </div>
+                <div class="mb-3">
+                    <label for="formControlInputWorkHours" class="form-label">Время работы</label>
+                    <input type="text" name="work_hours" id="formControlInputWorkHours" class="form-control" placeholder="Ежедневно с ... до ..." required>
+                </div>
 
-            <div class="mb-3">
-                <label for="formControlInputLinks" class="form-label">Сайт, соцсети (facebook, instagram, если есть)</label>
-                <textarea name="links" class="form-control" id="formControlInputLinks" rows="3"></textarea>
-            </div>
+                <div class="mb-3">
+                    <label for="formControlInputPhone" class="form-label">Номер телефона (если есть, можно несколько)</label>
+                    <input type="text" name="phone" id="formControlInputPhone" class="form-control" placeholder="+995...">
+                </div>
 
-            <div class="mb-3">
-                <label for="formControlInputWorkHours" class="form-label">Время работы</label>
-                <input type="text" name="work_hours" id="formControlInputWorkHours" class="form-control" placeholder="Ежедневно с ... до ..." required>
-            </div>
+                <div class="mb-3">
+                    <label for="formControlInputPhotos" class="form-label">Фотографии места (внутри, снаружи, меню, прайс-лист)</label>
+                    <input type="file" name="photos[]" id="formControlInputPhotos" class="form-control" aria-labelledby="photosHelpBlock" multiple required>
+                    <div id="photosHelpBlock" class="form-text">Можно выбрать несколько фотографий (.JPG, .PNG), до 20 файлов, до 100 Мб суммарно</div>
+                </div>
 
-            <div class="mb-3">
-                <label for="formControlInputPhone" class="form-label">Номер телефона (если есть, можно несколько)</label>
-                <input type="text" name="phone" id="formControlInputPhone" class="form-control" placeholder="+995...">
-            </div>
+                <div class="mb-4">
+                    <label for="formControlInputNote" class="form-label">Примечание для админа (необязательно)</label>
+                    <textarea name="note" class="form-control" id="formControlInputNote" rows="2" aria-labelledby="noteHelpBlock"></textarea>
+                    <div id="noteHelpBlock" class="form-text">Напишите кто вы в чате, ваш контакт и нужна ли вам обратная связь.</div>
+                </div>
 
-            <div class="mb-3">
-                <label for="formControlInputPhotos" class="form-label">Фотографии места (внутри, снаружи, меню, прайс-лист)</label>
-                <input type="file" name="photos[]" id="formControlInputPhotos" class="form-control" aria-labelledby="photosHelpBlock" multiple required>
-                <div id="photosHelpBlock" class="form-text">Можно выбрать несколько фотографий (.JPG, .PNG), до 20 файлов, до 100 Мб суммарно</div>
-            </div>
+                <button type="submit" id="formBtnSubmit" class="btn btn-primary" aria-labelledby="submitHelpBlock">Отправить на проверку</button>
+                <div id="submitHelpBlock" class="form-text">Сервер загрузки порой бывает медленный, загрузка может занять до нескольких минут, наберитесь терпения и дождитесь окончания.</div>
+            </form>
 
-            <div class="mb-4">
-                <label for="formControlInputNote" class="form-label">Примечание для админа (необязательно)</label>
-                <textarea name="note" class="form-control" id="formControlInputNote" rows="2" aria-labelledby="noteHelpBlock"></textarea>
-                <div id="noteHelpBlock" class="form-text">Напишите кто вы в чате, ваш контакт и нужна ли вам обратная связь.</div>
-            </div>
+            <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function () {
+                    'use strict'
 
-            <button type="submit" id="formBtnSubmit" class="btn btn-primary" aria-labelledby="submitHelpBlock">Отправить на проверку</button>
-            <div id="submitHelpBlock" class="form-text">Сервер загрузки порой бывает медленный, загрузка может занять до нескольких минут, наберитесь терпения и дождитесь окончания.</div>
-        </form>
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.querySelectorAll('.needs-validation')
 
-        <script>
-            // Example starter JavaScript for disabling form submissions if there are invalid fields
-            (function () {
-                'use strict'
+                    // Loop over them and prevent submission
+                    Array.prototype.slice.call(forms)
+                        .forEach(function (form) {
+                            form.addEventListener('submit', function (event) {
+                                if (!form.checkValidity()) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
 
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.querySelectorAll('.needs-validation')
+                                form.classList.add('was-validated');
+                            }, false)
+                        })
+                })()
+            </script>
+        </article>
+    </section>
 
-                // Loop over them and prevent submission
-                Array.prototype.slice.call(forms)
-                    .forEach(function (form) {
-                        form.addEventListener('submit', function (event) {
-                            if (!form.checkValidity()) {
-                                event.preventDefault();
-                                event.stopPropagation();
-                            }
-
-                            form.classList.add('was-validated');
-                        }, false)
-                    })
-            })()
-        </script>
-
-
-    </article>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-<script>Fancybox.bind("[data-fancybox]", {});</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>Fancybox.bind("[data-fancybox]", {});</script>
 </body>
 </html>
