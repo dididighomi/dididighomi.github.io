@@ -12,11 +12,20 @@ class CompileCommand extends AbstractCommand
     private string $sourceDir;
     private string $docsDir;
 
+    private array $lastModified;
+
+    private array $pagesInGit;
+
+    /**
+     * @throws \Exception
+     */
     public function __construct(ResourceManager $resourceManager)
     {
         parent::__construct($resourceManager);
         $this->sourceDir = $this->resourceManager->getConfig()->get('app.sourceDir');
         $this->docsDir = $this->resourceManager->getConfig()->get('app.docsDir');
+        $this->lastModified = json_decode(file_get_contents($this->sourceDir . '/last_modified.json'), true);
+        $this->pagesInGit = $this->getPagesInGit();
     }
 
     /**
@@ -51,12 +60,10 @@ class CompileCommand extends AbstractCommand
                     echo $relPath . "/{$entry->getFilename()}\n";
                     $phtmlFile = $this->sourceDir . $relPath . '/' . $entry->getFilename();
                     $sourceName = ltrim(preg_replace('/\.phtml$/', '', $relPath . '/' . $entry->getFilename()), '/');
-                    $htmlFile = $this->docsDir . '/' . $sourceName . '.html';
-                    $this->compileHtml($sourceName);
-                    FileHelper::touch($htmlFile, FileHelper::filemtime($phtmlFile));
-
-//                    $sourceDir = $this->sourceDir . '/' . $sourceName;
-//                    var_dump($sourceDir);die;
+                    $resultFile = $this->docsDir . '/' . $sourceName . '.html';
+                    $this->compileHtml($sourceName, $resultFile);
+                    FileHelper::touch($resultFile, FileHelper::filemtime($phtmlFile));
+                    $this->updatePageLastModified($sourceName, $resultFile);
 
                 } elseif ($entry->getFilename() === 'gallery.php') {
                     echo $relPath . "/{$entry->getFilename()}\n";
@@ -67,23 +74,46 @@ class CompileCommand extends AbstractCommand
                 throw new \RuntimeException("Directory entry \"{$entry->getPathname()}\" is neither a file nor a directory");
             }
         }
+
+        file_put_contents($this->sourceDir . '/last_modified.json', json_encode($this->lastModified, JSON_PRETTY_PRINT + JSON_UNESCAPED_UNICODE + JSON_UNESCAPED_SLASHES));
+        $this->generateSitemap();
+
     }
 
     /**
-     * @param string $sourceName    e.g. "food/millco"
+     * @param string $sourceName e.g. "food/millco"
+     * @param string $resultFile Full path to result (rendered) HTML file
      * @return void
-     * @throws \Exception
      */
-    private function compileHtml(string $sourceName): void
+    private function compileHtml(string $sourceName, string $resultFile): void
     {
         if (!is_dir($this->docsDir . '/' . dirname($sourceName))) {
             FileHelper::mkdir($this->docsDir . '/' . dirname($sourceName), 0777, true);
         }
-        $html = $this->resourceManager->getTemplateEngine()->render('page', [
+        $html = $this->resourceManager->getTemplateEngine()->render($sourceName == 'index' ? 'main' : 'page', [
             'source' => $sourceName,
         ]);
-        $htmlFile = $this->docsDir . '/' . $sourceName . '.html';
-        FileHelper::file_put_contents($htmlFile, $html);
+        FileHelper::file_put_contents($resultFile, $html);
+    }
+
+    private function updatePageLastModified(string $sourceName, string $resultFile): void
+    {
+        $publicResultFile = '/' . $sourceName . '.html';
+        $md5 = md5_file($resultFile);
+        $updateLastModified = false;
+        if (array_key_exists($publicResultFile, $this->lastModified)) {
+            if ($this->lastModified[$publicResultFile]['md5'] != $md5) {
+                $updateLastModified = true;
+            }
+        } else {
+            $updateLastModified = true;
+        }
+        if ($updateLastModified) {
+            $this->lastModified[$publicResultFile] = [
+                'md5' => $md5,
+                'lastModified' => date('c'),
+            ];
+        }
     }
 
     /**
@@ -169,5 +199,45 @@ class CompileCommand extends AbstractCommand
         );
         imagejpeg($image, $previewImage, 90);
         FileHelper::touch($previewImage, FileHelper::filemtime($sourceImage));
+    }
+
+    /**
+     * @return array
+     * @throws \Exception
+     */
+    private function getPagesInGit(): array
+    {
+        chdir($this->docsDir);
+        $cmd = "git ls-files *.html";
+        if (exec($cmd, $pagesInGit) === false) {
+            throw new \Exception("Failed to execute command \"{$cmd}\"");
+        }
+        return array_map(function(string $file) { return '/' . $file; }, $pagesInGit);
+    }
+
+    private function generateSitemap(): void
+    {
+        $baseHref = 'https://dididighomi.ge';
+        $xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n";
+        uksort($this->lastModified, function(string $a, string $b) {
+            if ($a == '/index.html') {
+                return -1;
+            }
+            if ($b == '/index.html') {
+                return 1;
+            }
+            return strcasecmp($a, $b);
+        });
+        foreach ($this->lastModified as $page => $info) {
+            if (!in_array($page, $this->pagesInGit) || $page == '/add.html') {
+                continue;
+            }
+            if ($page == '/index.html') {
+                $page = '/';
+            }
+            $xml .= "<url>\n	<loc>{$baseHref}{$page}</loc>\n	<lastmod>{$info['lastModified']}</lastmod>\n	<priority>1.0</priority>\n</url>\n";
+        }
+        $xml .= "</urlset>\n";
+        file_put_contents($this->docsDir . '/sitemap.xml', $xml);
     }
 }
