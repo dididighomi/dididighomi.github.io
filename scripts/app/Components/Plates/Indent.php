@@ -27,6 +27,13 @@ class Indent implements ExtensionInterface
     public function indent(string $contents, int $indent): string
     {
         $padding = str_pad('', $indent, ' ');
-        return $padding . implode("\n{$padding}", explode("\n", rtrim($contents))) . "\n";
+//        return $padding . implode("\n{$padding}", explode("\n", rtrim($contents))) . "\n";
+        return implode(
+            "\n",
+            array_map(
+                function($str) use ($padding) { return (trim($str) != '' ? $padding : '') . $str; },
+                explode("\n", rtrim($contents))
+            )
+        ) . "\n";
     }
 }

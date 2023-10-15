@@ -1,2 +1,2 @@
 php console.php compile
-@php -r "sleep(1);"
+@php -r "usleep(300 * 1000);"

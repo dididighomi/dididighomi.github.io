@@ -4,9 +4,9 @@
 /** @var string $source */
 
 $contents = $this->fetch('source::' . $source);
-$this->layout('layouts/page_layout', [
-    'title' => $this->getHeader($contents),
+$this->layout('layouts/main_layout', [
+    'title' => 'Диди Дигоми, Тбилиси',
     'source' => $source,
 ]);
 
-echo $this->indent($contents, 12);
+echo $this->indent($contents, 8);
