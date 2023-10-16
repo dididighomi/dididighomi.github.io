@@ -208,3 +208,5 @@ input::placeholder {
     opacity: 0.5 !important;
     font-style: italic;
 }
+
+#disqus_thread { margin-top: 50px; }
