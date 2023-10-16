@@ -27,26 +27,25 @@ class GetHeader implements ExtensionInterface
 
     /**
      * @param string $html
-     * @return string
+     * @return string|null
      * @throws \Exception
      */
-    public function getHeader(string $html): string
+    public function getHeader(string $html): ?string
     {
-//        return $this->extractHeader(FileHelper::file_get_contents($this->template->path()));
         return $this->extractHeader($html);
     }
 
     /**
      * @param string $html
-     * @return string
+     * @return string|null
      * @throws \Exception
      */
-    private function extractHeader(string $html): string
+    private function extractHeader(string $html): ?string
     {
         if (preg_match('/<h1>(.*)<\/h1>/is', $html, $m)) {
             return trim(htmlspecialchars_decode(strip_tags($m[1])));
         } else {
-            throw new \Exception("Failed to extract H1 header");
+            return null;
         }
     }
 }

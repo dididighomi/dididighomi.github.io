@@ -5,7 +5,7 @@
 
 $contents = $this->fetch('source::' . $source);
 $this->layout('layouts/page_layout', [
-    'title' => $this->getHeader($contents),
+    'title' => (string) $this->getHeader($contents),
     'source' => $source,
 ]);
 
