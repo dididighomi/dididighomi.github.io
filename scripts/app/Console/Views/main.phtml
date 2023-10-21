@@ -3,10 +3,12 @@
 /** @var \App\Components\Plates\Template $this */
 /** @var string $source */
 
-$contents = $this->fetch('source::' . $source);
+$meta = new \App\Components\Plates\MetaContainer();
+$contents = $this->fetch('source::' . $source, ['meta' => $meta]);
 $this->layout('layouts/main_layout', [
     'title' => 'Диди Дигоми, Тбилиси',
     'source' => $source,
+    'meta' => $meta,
 ]);
 
 echo $this->indent($contents, 8);

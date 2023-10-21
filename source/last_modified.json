@@ -1,7 +1,7 @@
 {
     "/index.html": {
-        "md5": "ed92120481785f95873ee6dd8e354f24",
-        "lastModified": "2023-10-15T23:28:55+00:00"
+        "md5": "8462d801f1244238d7d4693e99088677",
+        "lastModified": "2023-10-21T14:59:19+00:00"
     },
     "/add.html": {
         "md5": "8163bffd9d8e01053428e6a13dbf13c5",
@@ -18,6 +18,14 @@
     "/articles/wildberries.html": {
         "md5": "2b59668bbfd54d0cfff47d332f9b53ab",
         "lastModified": "2023-10-16T23:23:12+00:00"
+    },
+    "/beauty/clippers-barbershop.html": {
+        "md5": "26eda516ade02c74cceece52c0126851",
+        "lastModified": "2023-10-21T14:59:19+00:00"
+    },
+    "/beauty/local-barbershop.html": {
+        "md5": "fbbd19b482acf1ffc77f6524a66d8741",
+        "lastModified": "2023-10-21T14:59:19+00:00"
     },
     "/building/hardware-store.html": {
         "md5": "1e57b0423558a9ed486570d582bcc2e1",
@@ -95,6 +103,14 @@
         "md5": "29cbbf66efec9ba641fdda85aebf6c96",
         "lastModified": "2023-10-16T23:23:12+00:00"
     },
+    "/service/duplicate-keys.html": {
+        "md5": "1aaa385effffbb3352ef14e566011a19",
+        "lastModified": "2023-10-21T14:59:19+00:00"
+    },
+    "/service/jeo-di-art.html": {
+        "md5": "1bb1117cb6949052c911e3690cc0bf6b",
+        "lastModified": "2023-10-21T14:59:19+00:00"
+    },
     "/service/mimicraft.html": {
         "md5": "52c42fd3a620150cba1784ee62e64a26",
         "lastModified": "2023-10-16T23:23:12+00:00"
@@ -103,9 +119,17 @@
         "md5": "141f67526ae9f711b25a544f22b47a81",
         "lastModified": "2023-10-16T23:23:12+00:00"
     },
+    "/service/translation.html": {
+        "md5": "387c40b86ea562ef71d3939ad12a7205",
+        "lastModified": "2023-10-21T14:59:19+00:00"
+    },
+    "/service/window.html": {
+        "md5": "31cb3999563fc502d1ad044b70cfaa32",
+        "lastModified": "2023-10-21T14:59:19+00:00"
+    },
     "/sport/gaguagym.html": {
-        "md5": "bbd491b80010cbf05c89cae2ac649d27",
-        "lastModified": "2023-10-20T23:22:27+00:00"
+        "md5": "d721a4985e39ab60f1e5bed17960c360",
+        "lastModified": "2023-10-21T14:59:19+00:00"
     },
     "/sport/tonus-gym.html": {
         "md5": "1dc992726e329460b10002b8908193b6",
