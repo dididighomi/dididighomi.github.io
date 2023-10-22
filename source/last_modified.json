@@ -8,12 +8,16 @@
         "lastModified": "2023-10-15T23:13:20+00:00"
     },
     "/articles/faq.html": {
-        "md5": "b195e33648f05975d5e729b6b46993a6",
-        "lastModified": "2023-10-16T23:23:12+00:00"
+        "md5": "e3a84f900421bd3504036db6339ef6ad",
+        "lastModified": "2023-10-21T23:54:50+00:00"
     },
     "/articles/outage.html": {
         "md5": "e1c2814c194aa07e5e84e0c9c750bb66",
         "lastModified": "2023-10-16T23:23:12+00:00"
+    },
+    "/articles/where-buy.html": {
+        "md5": "afc7191bdfa44593765070c240b35730",
+        "lastModified": "2023-10-21T23:54:50+00:00"
     },
     "/articles/wildberries.html": {
         "md5": "2b59668bbfd54d0cfff47d332f9b53ab",
@@ -31,6 +35,10 @@
         "md5": "1e57b0423558a9ed486570d582bcc2e1",
         "lastModified": "2023-10-16T23:23:12+00:00"
     },
+    "/electronics/pc-room.html": {
+        "md5": "5e17263b62b9af896a2ec77b7e47580e",
+        "lastModified": "2023-10-21T23:54:57+00:00"
+    },
     "/food/beer-garden.html": {
         "md5": "09d2ccbbf9a913d2cde0e93681548762",
         "lastModified": "2023-10-16T23:23:12+00:00"
@@ -46,6 +54,10 @@
     "/food/gourmet-garden.html": {
         "md5": "de53fe4e2293646698143630a77465ba",
         "lastModified": "2023-10-16T23:23:12+00:00"
+    },
+    "/food/grill-and-go.html": {
+        "md5": "2067e7749de3a5ebd930b99da57536be",
+        "lastModified": "2023-10-21T23:54:57+00:00"
     },
     "/food/millco.html": {
         "md5": "cd13e0f7fb024bd62e0fd3ac72552f5c",
@@ -108,8 +120,8 @@
         "lastModified": "2023-10-21T14:59:19+00:00"
     },
     "/service/jeo-di-art.html": {
-        "md5": "1bb1117cb6949052c911e3690cc0bf6b",
-        "lastModified": "2023-10-21T14:59:19+00:00"
+        "md5": "0a3f71a4200e489bdb76e1923723bcae",
+        "lastModified": "2023-10-21T23:54:57+00:00"
     },
     "/service/mimicraft.html": {
         "md5": "52c42fd3a620150cba1784ee62e64a26",
@@ -128,8 +140,8 @@
         "lastModified": "2023-10-21T14:59:19+00:00"
     },
     "/sport/gaguagym.html": {
-        "md5": "d721a4985e39ab60f1e5bed17960c360",
-        "lastModified": "2023-10-21T14:59:19+00:00"
+        "md5": "b3d44877bf53016f2215e86b12069106",
+        "lastModified": "2023-10-22T00:09:41+00:00"
     },
     "/sport/tonus-gym.html": {
         "md5": "1dc992726e329460b10002b8908193b6",
