@@ -2,12 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://dididighomi.ge/</loc>
-	<lastmod>2023-10-21T14:59:19+00:00</lastmod>
+	<lastmod>2023-10-22T00:21:24+00:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://dididighomi.ge/building/hardware-store.html</loc>
 	<lastmod>2023-10-16T23:23:12+00:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://dididighomi.ge/electronics/pc-room.html</loc>
+	<lastmod>2023-10-22T00:14:26+00:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>

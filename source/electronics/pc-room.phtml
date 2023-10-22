@@ -1,0 +1,29 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+
+?>
+<header>
+    <h1>PC Room</h1>
+</header>
+
+<p>Весьма приличный компьютерный магазин. Хороший ассортимент комплектующих для сборки ПК, причём ориентированных на дорогие и игровые сборки, а не тот ширпотреб, что обычно продаётся везде. Консультанты прекрасно говорят по-русски. Фотографии сделаны в марте 2023, поэтому цены не актуальны.</p>
+
+<?= $this->fetch('place-brief', [
+    'address' => 'ул. Царя Мириана, 20',
+    'yandexLink' => 'https://yandex.com.ge/maps/-/CDaGBO2F',
+    'googleLink' => 'https://maps.app.goo.gl/vUDXqBTXL5YRqVP57',
+    'links' => [
+        ['https://pcroom.ge/', 'pcroom.ge']
+    ],
+    'workHours' => 'Пн-Сб 10:00-19:00, Вс выходной',
+    'phones' => [
+        '+995 555 888 884',
+        '+995 596 88 55 85',
+    ],
+]) ?>
+
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'gallery',
+]) ?>
