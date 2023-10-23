@@ -14,7 +14,8 @@ class CompileCommand extends AbstractCommand
 
     private array $lastModified;
 
-    private array $pagesInGit;
+    private array $pagesInGit; // ["/add.html", "/building/hardware-store.html", "/electronics/pc-room.html""/food/beer-garden.html", ... ]
+
 
     /**
      * @throws \Exception
@@ -63,8 +64,9 @@ class CompileCommand extends AbstractCommand
                     $resultFile = $this->docsDir . '/' . $sourceName . '.html';
                     $this->compileHtml($sourceName, $resultFile);
                     FileHelper::touch($resultFile, FileHelper::filemtime($phtmlFile));
-                    $this->updatePageLastModified($sourceName, $resultFile);
-
+                    if (in_array($resultFile, $this->pagesInGit)) {
+                        $this->updatePageLastModified($sourceName, $resultFile);
+                    }
                 } elseif ($entry->getFilename() === 'gallery.php') {
                     echo $relPath . "/{$entry->getFilename()}\n";
                     $this->processGallery($relPath);
