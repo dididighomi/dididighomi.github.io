@@ -26,3 +26,9 @@
     'path' => preg_replace('/^source::/', '', $this->name->getName()),
     'gallery' => 'gallery',
 ]) ?>
+
+<h2>Меню</h2>
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'menu',
+]) ?>
