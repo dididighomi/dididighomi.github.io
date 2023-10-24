@@ -64,7 +64,7 @@ class CompileCommand extends AbstractCommand
                     $resultFile = $this->docsDir . '/' . $sourceName . '.html';
                     $this->compileHtml($sourceName, $resultFile);
                     FileHelper::touch($resultFile, FileHelper::filemtime($phtmlFile));
-                    if (in_array($resultFile, $this->pagesInGit)) {
+                    if (in_array("/{$sourceName}.html", $this->pagesInGit)) {
                         $this->updatePageLastModified($sourceName, $resultFile);
                     }
                 } elseif ($entry->getFilename() === 'gallery.php') {
@@ -98,6 +98,11 @@ class CompileCommand extends AbstractCommand
         FileHelper::file_put_contents($resultFile, $html);
     }
 
+    /**
+     * @param string $sourceName    e.g. "add"
+     * @param string $resultFile    e.g. "C:\Users\.../docs/add.html"
+     * @return void
+     */
     private function updatePageLastModified(string $sourceName, string $resultFile): void
     {
         $publicResultFile = '/' . $sourceName . '.html';
