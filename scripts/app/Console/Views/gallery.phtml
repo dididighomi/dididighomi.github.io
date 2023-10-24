@@ -16,13 +16,26 @@ $rawUrlEncodeAllButSlashes = function(string $path): string {
 <section class="gallery">
 <?php foreach ($galleryData[$gallery] as $photo) {
     if (is_array($photo)) {
-        $url = "/{$path}/" . $rawUrlEncodeAllButSlashes($photo[0]);
+        $file = $photo[0];
         $alt = $photo[1] ?? '';
     } else {
-        $url = "/{$path}/" . $rawUrlEncodeAllButSlashes($photo);
+        $file = $photo;
         $alt = '';
     }
+    $url = "/{$path}/" . $rawUrlEncodeAllButSlashes($file);
+    if (preg_match('/(\d{4})-(\d{2})-(\d{2})\s(\d{2})-(\d{2})-(\d{2})/', $file, $m)) {
+        $date = "{$m[3]}-{$m[2]}-{$m[1]} {$m[4]}:{$m[5]}";
+    } else {
+        $date = null;
+    }
+
+
     ?>
-    <div><a href="<?= $this->e($url) ?>"><img src="<?= $this->e($url) ?>" alt="<?= $this->e($alt) ?>" class="img-fluid img-thumbnail" data-fancybox="<?= $this->e($gallery) ?>"></a></div>
+    <div>
+        <a href="<?= $this->e($url) ?>"><img src="<?= $this->e($url) ?>" alt="<?= $this->e($alt) ?>" class="img-fluid" data-fancybox="<?= $this->e($gallery) ?>"></a>
+<?php if ($date !== null) { ?>
+        <div class="shot-date"><?= $this->e($date) ?></div>
+<?php } ?>
+    </div>
 <?php } ?>
 </section>
