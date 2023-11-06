@@ -1,0 +1,43 @@
+<?php
+
+/** @var \App\Components\Plates\Template $this */
+/** @var \App\Components\Plates\MetaContainer $meta */
+
+$meta->addKeywords([
+    'детский клуб',
+    'детская секция',
+    'обучение',
+    'робототехника',
+]);
+
+?>
+<header>
+    <h1>Клуб робототехники и программирования Кибертрон</h1>
+</header>
+
+<p>Доброго дня!</p>
+
+<p>Рады сообщить, что в Диди Дигоми открывает свои двери клуб робототехники и программирования для детей &laquo;Кибертрон&raquo;!</p>
+<p>Доступны более 7 направлений для детей от 5 до 12 лет.</p>
+<p>А нашим подписчикам в Инстаграм мы дарим 2 бесплатных пробных занятия!</p>
+<p>Записаться можно по телефону или в директ в Инстаграм.</p>
+
+<?= $this->fetch('place-brief', [
+    'address' => 'ул. Царя Мириана, д. 13 (Детский центр "Габриэль")',
+    'yandexLink' => 'https://yandex.ru/maps/-/CDeMbOZY',
+    'googleLink' => 'https://maps.app.goo.gl/PsuuF6Z1j98Zvqh27',
+    'links' => [
+        ['https://www.instagram.com/kibertr0n_georgia/', '@kibertr0n_georgia', 'Instagram'],
+        ['https://t.me/anton_bredihin', '@anton_bredihin', 'Telegram'],
+    ],
+    'workHours' => 'Воскресенье с 10:00 до 19:00',
+    'phones' => [
+        ['+79046000232', 'WhatsApp'],
+        '+995 591039542',
+    ],
+]) ?>
+
+<?= $this->fetch('gallery', [
+    'path' => preg_replace('/^source::/', '', $this->name->getName()),
+    'gallery' => 'gallery',
+]) ?>
