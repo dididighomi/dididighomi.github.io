@@ -5,6 +5,13 @@
 
 $meta = new \App\Components\Plates\MetaContainer();
 $contents = $this->fetch('source::' . $source, ['meta' => $meta]);
+if ($meta->hasKeywords()) {
+    $meta->addKeywords([
+        'Грузия',
+        'Тбилиси',
+        'Диди Дигоми',
+    ]);
+}
 $this->layout('layouts/page_layout', [
     'title' => (string) $this->getHeader($contents),
     'source' => $source,
